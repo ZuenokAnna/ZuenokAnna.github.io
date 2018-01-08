@@ -29,9 +29,3 @@
  Для галереи (интерьера) используется плаин jQuery Fancybox.
  Для выбора даты резерва в разделе RESERVATION используется jquery-ui.
  Для параллакс-эффекта на главной странице используется jQuery с функцией.
-6) Описать в каких браузерах и версиях проверяли работоспособность (opera, firefox, edge, ie, safari, chrome). Для проверки в safari придется использовать виртуальную машину (virtualbox и установить на нее macos)
-Google Chrome  версия 62.0.3202.94,
-firefox - 57.02,
-ie - 11 - не работает анимация слайдера,
-edge - Microsoft EdgeHTML 15.15063, Microsoft Edge 40.15063.674.0 - не работает анимация по :hover transform: rotate и background: linear-gradient, фиксированный фон,
-opera 	50.0.2762.45 (PGO),
