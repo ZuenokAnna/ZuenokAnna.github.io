@@ -1,6 +1,17 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot');
+    src: url('../font/fontello.eot') format('embedded-opentype'),
+    url('../font/fontello.woff') format('woff'),
+    url('../font/fontello.ttf') format('truetype'),
+    url('../font/fontello.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -12,7 +23,7 @@ header {
     top: 0;
     width: 100%;
     height: 100px;
-    background-color: rgba(250, 250, 250, .8);
+    background-color: white;
     border-top: 10px solid rgba(26, 12, 12, .9);
     border-bottom: 10px solid rgba(26, 12, 12, .9);
 }
@@ -210,6 +221,7 @@ main a img {
     left: 0;
     background-color: #140f0d;
 }
+
 .no-cssanimations .slides {
     background: url(../image/slide3.jpg) no-repeat top fixed;
     background-size: contain;
@@ -247,24 +259,8 @@ ul {
         opacity: 0;
     }
 }
+
 @keyframes anim_slides {
-    0% {
-        opacity: 0;
-    }
-    6% {
-        opacity: 1;
-    }
-    24% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-@-moz-keyframes anim_slides {
     0% {
         opacity: 0;
     }
@@ -288,8 +284,9 @@ ul {
     position: absolute;
     left: 0;
     top: 0;
+    -webkit-animation: anim_slides 20.0s linear infinite normal 0 running forwards;
     animation: anim_slides 20.0s linear infinite normal 0 running forwards;
-    
+
     -webkit-animation-name: anim_slides;
     -webkit-animation-duration: 20.0s;
     -webkit-animation-timing-function: linear;
@@ -307,6 +304,7 @@ ul {
     -moz-animation-delay: 0;
     -moz-animation-play-state: running;
     -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 .slides ul li:nth-child(2),
@@ -446,7 +444,7 @@ section span {
 }
 
 .section3 {
-    top: 150vw;
+    top: 148.5vw;
 }
 
 .gallary {
@@ -624,7 +622,7 @@ input[type="submit"] {
 
 footer {
     position: absolute;
-    top: 242vw;
+    top: 238vw;
     left: 0;
     width: 100%;
     height: 20vw;
@@ -694,10 +692,12 @@ footer>p:nth-of-type(2) {
     bottom: 4vw;
     font-size: 1.2vw;
 }
-footer>p:nth-of-type(1)  {
+
+footer>p:nth-of-type(1) {
     bottom: 6vw;
     font-size: 1.2vw;
 }
+
 footer a {
     color: white;
 }
@@ -721,13 +721,21 @@ footer li {
     height: 3vw;
     float: left;
     margin: 0 1vw;
+    font-size: 2vw;
 }
 
-footer li img {
-    position: inherit;
-    float: left;
-    width: 3vw;
-    height: 3vw;
+i:hover {
+    color: lightgrey;
+}
+
+i {
+    color: grey;
+}
+
+@media screen and (max-width: 1536px) {
+    section3>img {
+        top: -1.3vw;
+    }
 }
 
 @media screen and (max-width: 1480px) {
@@ -1154,12 +1162,10 @@ footer li img {
     footer li {
         width: 5vw;
         height: 5vw;
+        font-size: 4vw;
 
     }
-    footer li img {
-        width: 5vw;
-        height: 5vw;
-    }
+
     .hidden-menu {
         width: 100%
     }
